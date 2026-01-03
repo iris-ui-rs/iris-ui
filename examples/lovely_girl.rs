@@ -4,14 +4,9 @@
 
 use iris_ui::prelude::*;
 
+#[derive(IntoWidget)]
 struct LovelyGirl {
     girl: Girl,
-}
-
-impl IntoWidget for LovelyGirl {
-    fn into_widget(self) -> Widget {
-        self.girl.into()
-    }
 }
 
 fn lovely_girl() -> LovelyGirl {

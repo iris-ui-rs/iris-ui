@@ -8,6 +8,10 @@ pub mod prelude {
         HAlign, VAlign,
     };
 
+    // Re-export the derive macro so examples can `use iris_ui::prelude::*` and write
+    // `#[derive(IntoWidget)]` without importing `iris_ui_macros` explicitly.
+    pub use iris_ui_macros::IntoWidget;
+
     /// Helper to allow `..default()` shorthand in user code (like Bevy's prelude).
     ///
     /// Example: `Row { ..default() }`
